@@ -96,6 +96,15 @@ class Intervalle:
             isMaxIn == True
 
         return Intervalle(min, max, isMinIn, isMaxIn)
+    
+    def isEgal(self):
+        pass
+
+    def interNonVide(self):
+        pass
+
+    def adjacent(self):
+        pass
 
 inter = Intervalle(0,10, False, True)
 
