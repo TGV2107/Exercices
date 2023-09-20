@@ -97,8 +97,13 @@ class Intervalle:
 
         return Intervalle(min, max, isMinIn, isMaxIn)
     
-    def isEgal(self):
-        pass
+    def isEgal(self, i):
+        
+        if self.min == i.min and self.max == i.max and self.isMinIn == i.isMinIn and self.isMaxIn == i.isMaxIn:
+            
+            return True
+        
+        else: return False
 
     def interNonVide(self):
         pass
