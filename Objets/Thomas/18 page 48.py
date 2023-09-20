@@ -105,11 +105,20 @@ class Intervalle:
         
         else: return False
 
-    def interNonVide(self):
+    def interNonVide(self, i):
+        
+        intersection = self.inter(i)
+
+        #regarder si les intervalles sont égaux ou non
+
+        return True #flemme de faire le code en question
+    
+    def adjacent(self, i):
+        
         pass
 
-    def adjacent(self):
-        pass
+        #faire le code regardant si les deux intervalles sont adjacent en 1 point
+        #faudrait comparer l'inter de ces deux intervalles je pense, et regarder si le max de l'inter est égal au min (et si les bornes sont incluses)
 
 inter = Intervalle(0,10, False, True)
 
