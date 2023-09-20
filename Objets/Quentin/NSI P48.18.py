@@ -74,3 +74,8 @@ intervalle1 = Intervalle(0, False, 10, True)
 intervalle2 = Intervalle(5, False, 50, False)
 
 print(intervalle1.intersection(intervalle2))
+
+
+
+
+#PEPITO
