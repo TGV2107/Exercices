@@ -42,3 +42,7 @@ print(intervalle1.isIn(5))
 print(intervalle1.isIn(1))
 print(intervalle1.isIn(10))
 print(intervalle1.isIn(11))
+
+
+
+#PEPITOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
