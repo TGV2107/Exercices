@@ -32,9 +32,32 @@ class Intervalle:
         return Intervalle(min,max,isMinIn,isMaxIn)
 
         
+    def union(self, intervalle):
+                
+        if self.min < intervalle.min:
+            min = self.min
+            isMinIn = self.isMinIn
 
-    def union(self):
-        pass
+        else:
+            min = intervalle.min
+            isMinIn = intervalle.isMinIn
+
+        if self.min == intervalle.min and (self.isMinIn == False or intervalle.isMinIn == False):
+            isMinIn = False
+
+
+        if self.max < intervalle.max:
+            max = self.max
+            isMaxIn = self.isMaxIn
+
+        else:
+            max = intervalle.max
+            isMaxIn = intervalle.isMaxIn
+
+        if self.max == intervalle.max and (self.isMaxIn == False or intervalle.isMaxIn == False):
+            isMaxIn = False
+
+        return Intervalle(min, isMinIn, max, isMaxIn)
 
 # Teste
 intervalle1 = Intervalle(1,10,True, False)
@@ -42,3 +65,7 @@ print(intervalle1.isIn(5))
 print(intervalle1.isIn(1))
 print(intervalle1.isIn(10))
 print(intervalle1.isIn(11))
+i2 = intervalle1.union((Intervalle(5,15,True,True)))
+print(i2.min,i2.max)
+i3 = intervalle1.inter((Intervalle(5,15,True,True)))
+print(i3.min,i3.max)
