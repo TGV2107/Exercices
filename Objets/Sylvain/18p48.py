@@ -73,8 +73,12 @@ class Intervalle:
         else:
             return True
 
-    def adjacent():
-        pass
+    def adjacent(self,in2):
+        intersection = self.inter(in2)
+        if intersection.min == intersection.max and intersection.isMinIn == True and intersection.isMaxIn == True:
+            return False
+        else:
+            return True
 
 # Teste
 intervalle1 = Intervalle(1,10,True, False)
