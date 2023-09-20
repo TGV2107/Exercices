@@ -58,6 +58,23 @@ class Intervalle:
             isMaxIn = False
 
         return Intervalle(min, isMinIn, max, isMaxIn)
+    
+    def egal(self,in2):
+        """teste si 2 intervalles sont égaux"""
+        if self.min == in2.min and self.max == in2.max and self.isMinIn == in2.inMinIn and self.isMaxIn == in2.isMaxIn:
+            return True
+        else:
+            return False
+    
+    def interNonVide(self,in2):
+        intersection = self.inter(in2)
+        if self.min == intersection.max and intersection.isMinIn == False and intersection.isMaxIn == False:
+            return False
+        else:
+            return True
+
+    def adjacent():
+        pass
 
 # Teste
 intervalle1 = Intervalle(1,10,True, False)
