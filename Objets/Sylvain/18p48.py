@@ -70,6 +70,3 @@ print(i2.min,i2.max)
 i3 = intervalle1.inter((Intervalle(5,15,True,True)))
 print(i3.min,i3.max)
 
-
-
-#PEPITOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
