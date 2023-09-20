@@ -1,7 +1,7 @@
-package Objets.Sylvain;
+package Sylvain;
 
-public class main {
-    public static void main(String[] args) {
+public class Main {
+    public Main(String[] args) {
         Tulipe Akta = new Tulipe("Akta", true, null);
         System.out.println(Akta.getName());
     }

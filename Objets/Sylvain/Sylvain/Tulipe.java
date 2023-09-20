@@ -1,4 +1,4 @@
-package Objets.Sylvain;
+package Sylvain;
 
 import java.util.HashMap;
 import java.util.Map;
