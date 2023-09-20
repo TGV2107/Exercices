@@ -3,6 +3,7 @@ package Objets.Sylvain;
 import java.util.HashMap;
 import java.util.Map;
 
+//Vive les tulipes
 public class tulipe {
     private boolean isNoob;
 
