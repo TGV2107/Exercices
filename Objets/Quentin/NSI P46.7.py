@@ -7,4 +7,7 @@ class Point:
         return "(" + str(self.x) + "," + str(self.y) + ")"
 
 point = Point(10, 20)
-print(point)
+print(point)#saluuuuuuuut Quentin
+
+
+#BIGGGGGGGGGGGGG NOOOOOOOOOOOOOOOOOOOBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
