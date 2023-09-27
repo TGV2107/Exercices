@@ -26,10 +26,26 @@ def tableau_vide(t):
     for val in t:
 
         if val != None:
-
+            
             return False
         
     return True
 
 def taille(t):
     return len(t)
+
+def setTaille(t, taille):
+
+    if taille(t) > taille:
+
+        newboard = créer_tableau(taille)
+        for i in range (0, taille-1):
+            set(newboard,t[i],i)
+
+    elif taille(t) < taille:
+
+        newboard = créer_tableau(taille)
+        for i in range(0, taille(t) - 1):
+            set(newboard,t[i],i)
+    
+    return newboard
