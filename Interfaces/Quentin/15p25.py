@@ -35,7 +35,7 @@ def changer_taille(tableau: list, nouvTaille: int):
     nouvTableau = creer_tableau(nouvTaille)
 
     for i in range(taille(tableau)):
-        if(i <= nouvTaille):
+        if i < nouvTaille:
             set(nouvTableau, i, get(nouvTableau, i))
 
     return nouvTableau
