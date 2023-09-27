@@ -3,13 +3,11 @@ def créer_tableau(taille):
 
 def set(t,v,i):
 
-    if i <= taille(t) - 1:
-
-        t[i] = v
-        return t
-    
-    print("erreur")
-    return None
+    if i > taille(t):
+        t = setTaille(t,i+1)
+        
+    t[i] = v
+    return t
 
 def get(t,i):
 
