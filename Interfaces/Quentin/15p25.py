@@ -39,7 +39,3 @@ def changer_taille(tableau: list, nouvTaille: int):
             set(nouvTableau, i, get(nouvTableau, i))
 
     return nouvTableau
-
-while True:
-
-    pass
