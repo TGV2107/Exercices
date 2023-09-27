@@ -49,6 +49,3 @@ def setTaille(t, taille):
             set(newboard,t[i],i)
     
     return newboard
-
-while True:
-    print("pepito")
