@@ -1,6 +1,6 @@
 def creer_tableau(taille: int) -> list:
     return [None]*taille
-
+#PEPITO BAH BAH BAH
 def set(tableau: list, value, index: int) -> list:
     if index <= taille(tableau) - 1:
         tableau[index] = value

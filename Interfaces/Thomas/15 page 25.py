@@ -3,6 +3,9 @@ def créer_tableau(taille):
 
 def set(t,v,i):
 
+    if i > taille(t):
+        setTaille(t,i)
+        
     if i <= taille(t) - 1:
 
         t[i] = v
