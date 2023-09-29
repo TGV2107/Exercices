@@ -23,6 +23,7 @@ def retirer_element(e : dict,v):
 
     if elements_ensemble(e).__contains__(v):
         e.pop(v)
+    return e
 
 def ensemble_vide(e):
 
@@ -34,6 +35,23 @@ def ensemble_vide(e):
 def taille(e):
 
     return len(e)
+
+def union(e,e2):
+    
+    newE = créer_ensemble()
+    for val in elements_ensemble(e):
+        ajouter_element(newE,val)
+    for val in elements_ensemble(e2):
+        ajouter_element(newE,val)
+    return newE
+
+def intersection(e,e2):
+
+    newE = créer_ensemble()
+    for val in elements_ensemble(e):
+        if appartientA(e2,val) : ajouter_element(newE,val)
+
+    return newE
 
 ensemble = créer_ensemble()
 print(ensemble)
