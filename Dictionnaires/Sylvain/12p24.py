@@ -4,7 +4,7 @@ def creer_liste():
 
 def liste_vide(liste):
     """ Retourne True si la liste est vide """
-    return liste is ()      # la liste est vide si c'est le tuple vide
+    return liste == ()      # la liste est vide si c'est le tuple vide
 
 def inserer(liste, element):
     """ InsÃ¨re un Ã©lÃ©ment en tÃªte de liste et retourne la nouvelle liste """
@@ -25,7 +25,7 @@ def queue(liste):
 def elements_liste(liste):
     """ Retourne les Ã©lÃ©ments de laliste """
     res = []                # le tableau rÃ©sultat
-    while liste is not ():  # Ã  chaque itÃ©ration :
+    while liste != ():  # Ã  chaque itÃ©ration :
         tete, liste = liste #   extraire l'Ã©lÃ©ment et la nouvelle liste
         res.append(tete)    #   ajouter l'Ã©lÃ©ment au rÃ©sultat
     return res              # retourner le rÃ©sultat
@@ -73,6 +73,15 @@ dans le dictionnaire d."""
     def element_dico(self)-> list:
         """ittérateur qui retroune un tableau des clés d'un dictionnaire d"""
         return elements_liste(self.keys)
+    
+#teste
+
+d = Dico()
+print(d.keys,d.values)
+c = "coucou"
+v = 3
+
+print(d.add_values(c,v))
 
 
 
