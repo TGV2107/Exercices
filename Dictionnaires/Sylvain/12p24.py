@@ -1,98 +1,76 @@
 def creer_liste():
-    """ CrÃ©e une liste vide """
-    return ()               # la liste vide est le tuple vide
+    """ Crée une liste vide (utilise un tuple vide) """
+    return ()  # la liste vide est le tuple vide
 
 def liste_vide(liste):
     """ Retourne True si la liste est vide """
-    return liste == ()      # la liste est vide si c'est le tuple vide
+    return liste == ()  # la liste est vide si c'est le tuple vide
 
 def inserer(liste, element):
-    """ InsÃ¨re un Ã©lÃ©ment en tÃªte de liste et retourne la nouvelle liste """
-    return (element, liste) # nouvelle liste = tuple avec l'Ã©lÃ©ment en tÃªte
+    """ Insère un élément en tête de liste et retourne la nouvelle liste """
+    return (element, liste)  # nouvelle liste = tuple avec l'élément en tête
 
 def tete(liste):
-    """ Retourne la tÃªte de liste, ou produit une erreur si la liste est vide """
+    """ Retourne la tête de liste, ou produit une erreur si la liste est vide """
     assert not liste_vide(liste), "tete : liste vide !"
-    element, _ = liste      # la tÃªte de liste est le 1er Ã©lÃ©ment du tuple
-    return element
+    return liste[0]  # la tête de liste est le premier élément du tuple
 
 def queue(liste):
     """ Retourne la queue de la liste, ou produit une erreur si la liste est vide """
     assert not liste_vide(liste), "queue : liste vide !"
-    _, reste = liste        # la queue de la liste est le 2e Ã©lÃ©ment du tuple
-    return reste
+    return liste[1]  # la queue de la liste est le deuxième élément du tuple
 
 def elements_liste(liste):
-    """ Retourne les Ã©lÃ©ments de laliste """
-    res = []                # le tableau rÃ©sultat
-    while liste != ():  # Ã  chaque itÃ©ration :
-        tete, liste = liste #   extraire l'Ã©lÃ©ment et la nouvelle liste
-        res.append(tete)    #   ajouter l'Ã©lÃ©ment au rÃ©sultat
-    return res              # retourner le rÃ©sultat
+    """ Retourne les éléments de la liste """
+    res = []  # le tableau résultat
+    while not liste_vide(liste):  # à chaque itération :
+        res.append(tete(liste))  # ajouter la tête de liste au résultat
+        liste = queue(liste)  # obtenir la nouvelle liste en enlevant la tête
+    return res  # retourner le résultat
 
-def taille (t):
-    return len(t)
+def taille(t):
+    """ Retourne la taille de la liste """
+    l = 0
+    while not liste_vide(t):
+        t = queue(t)
+        l = l + 1
+    return l
 
 
-class Dico: 
-    def __init__(self) -> None:
-        self.keys = []
-        self.values = []
-        
-    
-    def add_values(self,c,v):
-        """Opérateur qui associe la valeur v à la clé c. dans le dictionnaire d"""
-        if c in self.keys:
+class Dico:
+    def __init__(self):
+        self.keys = creer_liste()
+        self.values = creer_liste()
+
+    def add_values(self, c, v):
+        """ Opérateur qui associe la valeur v à la clé c dans le dictionnaire d """
+        if c in elements_liste(self.keys):
             lc = elements_liste(self.keys)
             lv = elements_liste(self.values)
             for i in range(taille(self.keys)):
                 if c == lc[i]:
                     lv[i] = v
-                    newlv = creer_liste()
-                    for j in range(len(lv),0,-1):
-                        val = lv[j]
-                        if i == j:
-                            val = v
-                            inserer(newlv,val)
         else:
-            inserer(self.keys,c)
-            inserer(self.values,v)
+            self.keys = inserer(self.keys, c)
+            self.values = inserer(self.values, v)
 
-        return self.keys,self.values
-
-
-    def acces_values(self,c):
-        """assesseur qui retourne la valeur associé a la clé C du dictionnaire
-dans le dictionnaire d."""
+    def access_values(self, c):
+        """ Assesseur qui retourne la valeur associée à la clé C du dictionnaire
+            dans le dictionnaire d """
         lc = elements_liste(self.keys)
         lv = elements_liste(self.values)
         for i in range(taille(self.keys)):
             if c == lc[i]:
                 return lv[i]
 
-    def element_dico(self)-> list:
-        """ittérateur qui retroune un tableau des clés d'un dictionnaire d"""
+    def element_dico(self):
+        """ Itérateur qui retourne un tableau des clés d'un dictionnaire """
         return elements_liste(self.keys)
-    
-#teste
 
+
+# Test
 d = Dico()
-print(d.keys,d.values)
-c = "coucou"
-v = 3
+print(elements_liste(d.keys), elements_liste(d.values))  # [] []
 
-print(d.add_values(c,v))
-
-
-
-
-    
-    
-
-
-                
-        
-
-
-
-    
+d.add_values("cle1", 1)
+print(d.access_values("cle1"))  # 1
