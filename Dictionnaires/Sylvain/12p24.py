@@ -74,3 +74,4 @@ print(elements_liste(d.keys), elements_liste(d.values))  # [] []
 
 d.add_values("cle1", 1)
 print(d.access_values("cle1"))  # 1
+print(d.element_dico())
