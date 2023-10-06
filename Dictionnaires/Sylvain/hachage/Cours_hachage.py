@@ -15,7 +15,7 @@ def ajouter_cle(dico, cle, valeur):
     if dico[h] is None:         # si l'entrée du dictionnaire est vide, 
         dico[h] = [] # l'initialiser avec une liste vide
     # insérer la paire (cle, valeur) en tête de la liste des collisions
-    dico[h] = dico[h].append((cle, valeur))   
+    dico[h].append((cle, valeur))   
     return dico
 
 def valeur_cle(dico, cle):
