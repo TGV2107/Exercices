@@ -65,8 +65,14 @@ class Groupe:
 
 
 Thomas = Personne("Guntzer Vetter", "Thomas")
+print(Thomas.Nom)
 Quentin = Personne("Beyl", "Quentin")
 Sylvain = Personne("Rhin","Sylvain")
+print(Thomas.Nom)
+print(Quentin.Prenom)
+
+amitiétest = Amis(Thomas,Quentin)
+print(amitiétest.Personne1.Nom)
 
 groupe = Groupe([],[])
 
@@ -77,6 +83,6 @@ groupe.addPersonne(Sylvain)
 groupe.addAmis(Thomas,Quentin)
 groupe.addAmis(Thomas,Sylvain)
 
-for ami in groupe.getAmis(Thomas):
+#for ami in groupe.getAmis(Thomas):
 
-    print(ami.Nom, ami.Prenom)
+    #print(ami.Nom, ami.Prenom)
