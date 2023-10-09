@@ -1,0 +1,17 @@
+def enlever(l,v):
+t = elements_liste(l)
+	for i in range (len(t),-1):
+	if e != v:
+		inserer(l2,t[i])
+	return l2
+
+def separer(l,v):
+	l1 = creer_liste()
+	l2 = creer_liste()
+	t = elements_liste(l)
+	for i in range(len(t), -1):
+		if t[i] < v :
+			inserer(l1,t[i])
+		else:
+			inserer(l2,t[i])
+	return l1,L2
