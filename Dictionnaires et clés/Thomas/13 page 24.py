@@ -49,7 +49,6 @@ with open("Dictionnaires et clés/Thomas/pop_dept.csv", encoding="utf8") as file
 
         if population != "Population":
             population = int(population.replace(" ",""))
-        
-        d = ajouter_cle(d, département, population)
+            d = ajouter_cle(d, département, population)
 
 print(d)
