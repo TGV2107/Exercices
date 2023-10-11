@@ -29,7 +29,6 @@ def ajouter_cle(dico, cle, valeur):
     return dico
 
 def valeur_cle(dico, cle):
-
     h = hachage(cle)                        # calculer le code de hachage de la clé
     
     while h + 1 != len(dico):
