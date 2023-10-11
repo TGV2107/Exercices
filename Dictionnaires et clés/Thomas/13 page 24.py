@@ -7,27 +7,38 @@ def hachage(cle):
         code += ord(car)
     return code % HTAILLE
 
-#---
-""""""
 def creer_dico():
     return [None] * HTAILLE     # tableau de HTAILLE éléments
 
 def ajouter_cle(dico, cle, valeur):
+    global HTAILLE
+
     h = hachage(cle)        # calculer le code de hachage de la clé
-    if dico[h] == None:         # si l'entrée du dictionnaire est vide,
-        dico[h] = [] # l'initialiser avec une liste vide
     # insérer la paire (cle, valeur) en tête de la liste des collisions
-    dico[h].append((cle, valeur))
+
+    while dico[h] != None:
+        if len(dico) ==  h+1:
+            HTAILLE = HTAILLE + 1
+            dico.append((cle,valeur))
+            return dico
+
+        h = h + 1
+
+    dico[h] = (cle,valeur)
+
     return dico
 
 def valeur_cle(dico, cle):
+
     h = hachage(cle)                        # calculer le code de hachage de la clé
-    if dico[h] == None:                     # si l'entrée du dictionnaire est vide
-        return None                         # None indique que la clé n'est pas présente
-    for c, v in dico[h]:    # parcourir la liste des collisions
-        if cle == c:                        # si la clé correspond
-            return v                        # retourner la valeur
-    return None                             # sinon la clé n'est pas dans le dictionnaire
+    
+    while h + 1 != len(dico):
+        key, val = dico[h]
+        if key == cle:
+            return val
+        h = h + 1
+
+    return None
 
 def cles_dico(dico):
     t = []                                          # tableau des clés
