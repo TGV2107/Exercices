@@ -10,7 +10,8 @@ def test_bn_bissextile1():
 def test_bb_bissextile1():
     assert bissextile(100)== False, "100 est accepté alors qu'il ne devrais pas"
     assert bissextile(400) == True, "400 n'est pas accepté"
-    assert bissextile
+    assert bissextile(4) == True, "4 n'est pas accepté"
+    
 
 def test_bn_bissextile2():
     assert type(bissextile(n)) == bool,"Il y a un problème de type"
