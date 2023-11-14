@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "Modularité et gestion des bugs"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
