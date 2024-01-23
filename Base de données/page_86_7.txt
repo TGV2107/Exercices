@@ -1,0 +1,8 @@
+
+a.
+Relation : Mail
+Attribut : ID
+Domaine : integer
+
+c.
+Par la clé mail_id, qui devrait correspondre avec Id dans la première table

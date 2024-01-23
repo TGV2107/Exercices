@@ -14,13 +14,14 @@ import requests
 
 # COMPLÉTER le code ci-dessous
 def create_tinyurl(url):
-    reponse = requests.get(...)
-    if reponse.OK:
-        ...
-    ...
+    reponse = requests.get("http://tinyurl.com/api-create.php?url="+url)
+    if reponse.ok:
+        return reponse.text
+    else:
+        return "erreur"
 
 # TESTER la fonction ci-dessus
-raccourci = create_tinyurl(...)
+raccourci = create_tinyurl("https://www.cse-strasbourg.com/")
 print(raccourci)
 
 # COMPLÉMENT OPTIONNEL À L'EXERCICE

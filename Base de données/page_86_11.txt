@@ -1,0 +1,6 @@
+a. L'information num_film est un entier permettant d'identifier le numéro du film, qui est unique (clé primaire)
+b. Rôles.film est une clé étangère permettant de faire le lien avec la relation film, et donc d'identifier le numéro du film
+c. integer
+d. On passe titre en clé primaire et on enlève la clé primaire num film
+e. On met film et acteur en clé primaire
+f. Danc cette nouvelle relation, num_film n'est pas une clé unique, ce qui veux dire que l'on peut ajouter plusieurs fois le même film, ce qui va à l'encontre du principe de la base de donnée

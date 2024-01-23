@@ -1,0 +1,5 @@
+a. Cela permettrait de n'avoir qu'une valeur par vin, ce qui serait logique car c'est annormal d'avoir 2 valeurs pour le même vin
+
+b.Une erreur car la clé existe déjà, ou alors remplacement ?
+
+c. C'est possible mais inutile

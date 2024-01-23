@@ -1,6 +1,6 @@
+import time
 from random import randint
 
-import time
 
 class Card:
 
@@ -48,9 +48,4 @@ class Packet:
 
 
 Pack = Packet()
-
-while True:
-
-    print(Pack.getRandomCard().getName())
-
-    time.sleep(1)
+cartes = []

@@ -1,0 +1,9 @@
+a. Cepage : str
+TA : integer
+pH : float
+
+b. Cepage
+
+c. On peut passer cepage de domaine en clé étangère relié à la clé cepage de Cepage
+
+d. (Sur one note)

@@ -1,0 +1,9 @@
+a : Les interfaces de Liste, Pile et File permettent toutes le stockage de données sous forme de chaîne.
+Leur différence majeure est l'ordre de sortie, dans une liste le choix est libre et simple, dans une pile le dernier à être entrée sort en premier et dans une file le premier à être entré sort en premier
+
+b : Pour pile : sommet(empiler(pile,e)) == e
+    Pour file : tête(enfiler(pile, e)) == e
+
+c:
+dictio = {"e" : 1, "f" : 2}
+print(dictio["e"] == dictio.get("e"))
