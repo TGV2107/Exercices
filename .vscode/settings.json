@@ -1,5 +1,6 @@
 {
     "python.testing.pytestArgs": [
+<<<<<<< HEAD
         "."
     ],
     "python.testing.unittestEnabled": false,
@@ -8,4 +9,10 @@
         "empiler",
         "enfiler"
     ]
+=======
+        "Modularité et gestion des bugs"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+>>>>>>> 56ee2bf5c45f7c118e7fb1be7059213a5f42aa19
 }
